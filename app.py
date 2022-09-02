@@ -71,6 +71,7 @@ def sendMail():
         # send mail to the user 
         # d is a temp var can be used for debuging 
         d = MailAttachment(clientEmail=clientEmail).send()
+        print(d)
         # save the response in dictionary
         response = {"fullFilmenttext":f"mail sent to {clientEmail}"}
         # save the response in the db and return response

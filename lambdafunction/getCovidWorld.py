@@ -19,8 +19,8 @@ def getCovidStatus(country):
     '''gets the covid status country wise'''
     data = {"country":country}
     encoded_data = json.dumps(data).encode('utf-8')
-    # URL = "https://21a94ec1.ngrok.io/covidWorld" # url for local testing
-    URL = "https://webhook-c17hawke.herokuapp.com/covidWorld"
+    URL = "https://92b4-14-97-167-154.in.ngrok.io/covidWorld" # url for local testing
+    #URL = "https://webhook-c17hawke.herokuapp.com/covidWorld"
     response = http.request('POST', URL, headers={'Content-Type': 'application/json'}, body=encoded_data)
     return response.data.decode('utf-8')
 

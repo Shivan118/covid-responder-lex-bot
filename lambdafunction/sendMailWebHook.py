@@ -16,8 +16,8 @@ http = urllib3.PoolManager()
 def sendTestEmail(name, mobile_number, email):
     data = {"email":email, "name":name, "phone": mobile_number}
     encoded_data = json.dumps(data).encode('utf-8')
-    # URL = "https://21a94ec1.ngrok.io/sendMail" # url for local testing
-    URL = "https://webhook-c17hawke.herokuapp.com/sendMail"
+    URL = "https://92b4-14-97-167-154.in.ngrok.io/sendMail" # url for local testing
+    #URL = "https://webhook-c17hawke.herokuapp.com/sendMail"
     response = http.request('POST', URL, headers={'Content-Type': 'application/json'}, body=encoded_data)
     return response.data.decode('utf-8')
 

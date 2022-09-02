@@ -19,10 +19,10 @@ def getCovidStatus(PIN):
     data = {"PIN":PIN}
     # encode data 
     encoded_data = json.dumps(data).encode('utf-8')
-    # URL = "https://21a94ec1.ngrok.io/covidInfo" # use only for local test
+    URL = "https://92b4-14-97-167-154.in.ngrok.io/covidInfo" # use only for local test
 
     # Webhook URL hosted on Heroku
-    URL = "https://webhook-c17hawke.herokuapp.com/covidInfo"
+    #URL = "https://webhook-c17hawke.herokuapp.com/covidInfo"
 
     # Make a post request to the URL with header and body containing encoded data
     response = http.request('POST', 

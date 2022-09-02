@@ -58,10 +58,10 @@ class MailAttachment:
 
 		# login with the auth keys and send the email
 		with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-		    smtp.login(eMAIL, ePASSKEY)
-		    print("sending email...")
-		    smtp.send_message(msg)
-		    print("email Sent")
+			smtp.login(eMAIL, ePASSKEY)
+			print("sending email...")
+			smtp.send_message(msg)
+			print("email Sent")
 
 
 			

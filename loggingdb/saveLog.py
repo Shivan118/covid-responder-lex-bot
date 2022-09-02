@@ -19,7 +19,9 @@ class Log:
         self.dbPASSWORD = dbPASSWORD
         
         # connection string is optained fromt the mongodb cloud
-        self.connectionString= f"mongodb+srv://responder_google01:{self.dbPASSWORD}@cluster0-cjxui.mongodb.net/test?retryWrites=true&w=majority"        
+        self.connectionString= f"mongodb+srv://covid:{self.dbPASSWORD}@cluster0.1u2xotq.mongodb.net/?retryWrites=true&w=majority"
+
+        #self.connectionString= f"mongodb+srv://responder_google01:{self.dbPASSWORD}@cluster0-cjxui.mongodb.net/test?retryWrites=true&w=majority"        
         self.client = MongoClient(self.connectionString)
         
     def insertLog(self, enterLog=None):
